@@ -1,0 +1,10 @@
+overview->
+multithreading is a process of executing multiple thread simultenously.
+A thread is a light weight of sub-process, the smallest unit of processing.
+a) vlc
+b)idm
+c)ms word
+
+difference between multitasking and multithreading
+if multiple process are running on the appication that is multitasking 
+and if we are using multiple thread amongst with them then this is known as multithreading

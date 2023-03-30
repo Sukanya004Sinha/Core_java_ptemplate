@@ -53,21 +53,28 @@ public void startReading(){
   public void startWriting(){
     Runnable r2 = ()->{
         System.out.println("writer started...");
-        while (true){
-            try{
+        try{
+        while (!socket.isClosed()){
+        
                 BufferedReader br1 = new BufferedReader
                 (new InputStreamReader(System.in));
                 String content =br1.readLine();
     out.println(content);
     out.flush(); //sometimes when when is full then send is not send then we had to flush here 
-            }
+      if(content.equals("exit")){
+        socket.close();
+        break;
+      }     
+
+
+}
+        }
             catch(Exception e){
                 e.printStackTrace();
                 // it is used for Trace the exception on what line we get an exception on console. in which line we get an exception for that we used a trace
             }
 
-        }
-
+        
       };
       new Thread(r2).start();
     }
