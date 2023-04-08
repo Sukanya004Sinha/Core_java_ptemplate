@@ -55,7 +55,7 @@ collection is divided into 3 parts
 
 Map
 
-Note - >the root interface of collection is collection 
+Note - >the root interface of collections is collection 
 Note ->the root interface of Map is Map itself
 the collection framework is nothing but Java.util package
 Ques- What is the parent interface of collection ??
@@ -72,6 +72,55 @@ C:\Users\sukan>javap java.util.Collection
 Compiled from "Collection.java"
 public interface java.util.Collection<E> extends java.lang.Iterable<E> 
 {}
+
+
+
+Key interfaces of collection 
+****Collection  data key interfaces***
+ListSet
+SortedSet
+NavigableSet
+Queue
+
+
+*****Map data key interfaces****
+SortedMap
+NavigableMap
+Map.entry
+
+***Cursors data key interfaces*****
+Enumeration 
+IteratorListIterator
+
+******Sorting key interfaces*******
+1)Comparable(java.lang package)
+2)Comparator(java.util)
+
+
+***************************************************************************
+List interface
+  
+
+  Collection(I) ---> parent interface of List
+  Iterable(I)-------> Parent interface of Collection
+
+
+  List contains implementation classes
+  1)ArrayList(c)  1.2v
+  2)LinkedList(c) 1.2v
+  3)Vector(c)     1.0v
+  4)Stack(C)      1.0v
+
+The collection framework introduces in java 1.2 version
+The collection is most popular in 1.5 version because of Autoboxing and geerics concept
+
+
+java 1.0 version : The classes which are introduced in 1.0 v is calles legacy classes
+
+
+Every collection class represent grp of single entity 
+
+
 
 
 
