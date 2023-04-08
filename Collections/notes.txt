@@ -1,0 +1,77 @@
+What is collection??
+collection is a group of entities represent  as a single entity
+collection are introduced in java 1.2 version
+Autoboxing , Generics -> because of these 2 features collections are more powerful
+collection framework provides to store and manipulate the data
+collection framework is haveing a group of classes and intefaces to work with the group of objects.
+
+All the collection framework belongs to java.util package
+
+Collection framework divide into 2 parts
+collection and Map
+
+What is the root interface of collection ?
+Root interface of collection is collection
+
+Collection is divided into 3 parts:-
+1. List
+2. Set 
+3. Queue
+
+Cursors-> To read the data from collection classes we have cursors
+We have 3 cursors
+1. Enumeration Cursors
+2. Interator Cursors
+3. List Iterator Cursor
+
+Difference between Arrays and collection ??
+Arrays-> Arrays can store only homogenous data.
+Arrays can store  both primitive data and objects data.
+Arrays is fixed in size.
+In terms of memories we are not using Arrays memory wastage is there
+Arrays are not supporting methods. operations become complex.
+performance wise Arrays is good.
+============================================================================
+Collection-> Collection can store heterogenous data.
+Collections can only store object data. Collections can't store primitive data.
+Collections are growable in nature its can be automatically increased or decreased.
+Memory wise collection is good.
+Collectiosns are supporting methods. operations become easy.
+performace wise collection is not too good for example if we are creating an ArrayList for n=5 
+and again we need to create an arrayList of size 12 then copying one by one data will take time.
+it means existing data is getting copied in new ArrayList so its taking time.
+
+Collection vs collections
+
+
+Collection is a root interface of collection framework
+collections is a class that contains some methods to perform some operations
+sort() nCopies()
+**************Collection *********
+collection is divided into 3 parts
+1)List
+2)Queue
+3)Set
+
+Map
+
+Note - >the root interface of collection is collection 
+Note ->the root interface of Map is Map itself
+the collection framework is nothing but Java.util package
+Ques- What is the parent interface of collection ??
+the parent interface of the collection is Iterable
+
+To check the predefined support for collection 
+  ********* there are 2 ways to check the predefined support for collection *********
+ 1) Java API
+ 2)javap command 
+
+javap java.util.Collection
+
+C:\Users\sukan>javap java.util.Collection
+Compiled from "Collection.java"
+public interface java.util.Collection<E> extends java.lang.Iterable<E> 
+{}
+
+
+
