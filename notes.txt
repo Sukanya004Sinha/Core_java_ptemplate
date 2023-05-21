@@ -1,0 +1,5 @@
+Stream Api->
+Stream Api is a java 1.8 features
+these streams are related to collection frameworks (Groups of object) These streams are very different from io streams , io streams are the sequence of data.
+Stream Api is basically perform bulk operations and process the objects of ollection.
+Streams reduced the code length
