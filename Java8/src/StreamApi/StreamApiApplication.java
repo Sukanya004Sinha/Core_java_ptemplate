@@ -2,6 +2,7 @@ package StreamApi;
 
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -15,7 +16,7 @@ public class StreamApiApplication {
         employees.add(new Employee("Sparm", "boy", 5500.0, List.of("Project 3", "Project 4")));
 
     }
-    public static void main(String[] args){
+    public static void main(String[] args) throws NoSuchFieldException {
         //Stream.of(employees);
         //foreach
         //employees.stream().forEach(employee -> System.out.println(employee));
@@ -74,5 +75,38 @@ public class StreamApiApplication {
                 .flatMap(strings -> strings.stream())
                 .collect(Collectors.joining(","));
         System.out.println(projects);
+
+        // hort Circuit operations
+        List<Employee> shortCircuit =
+        employees.
+                stream()
+                .skip(0)
+                .limit(1)
+                .collect(Collectors.toList());
+        System.out.println(shortCircuit);
+
+        // Finite Data
+        Stream.generate(Math::random)
+                .limit(5)
+                .forEach(value->System.out.println(value));
+
+        // Sorting
+        List<Employee> sortedEmployees = employees.stream().sorted((o1, o2) ->
+      o1.getFirstName().compareToIgnoreCase(o2.getFirstName()))
+                .collect(Collectors.toList());
+        System.out.println(sortedEmployees);
+
+        // minimum and maximum
+         employees.stream().max(Comparator.comparing
+                (Employee::getSalary))
+                .orElseThrow(NoSuchFieldException::new);
+
+        //reduce
+        Double totalSal =
+        employees
+                .parallelStream().map(employee -> employee.getSalary())
+                .reduce(0.0,Double::sum);
+        System.out.println(totalSal +"totalSal ");
+
     }
 }

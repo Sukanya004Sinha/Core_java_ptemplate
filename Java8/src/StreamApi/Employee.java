@@ -45,7 +45,7 @@ public class Employee {
         this.latName = latName;
     }
 
-    public static Double getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
